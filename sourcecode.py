@@ -5,7 +5,10 @@ from random import sample as generar
 # i representa los meses
 # k representa los departamentos
 
-prodmens = []
+dp1 = [] # Necesito encontrar un modo de dividir las listas para encontrar lo que pertenece a cada departamento
+dp2 = [] # o, en su defecto, encontrar el modo de guardar todo en un array y extraerlo cuando lo necesite
+dp3 = [] # como si fueran coordenadas
+vk = []
 # Se genera una lista con valores desde el 400 hasta el 1500
 valores = range(400,1500)
 # La función 'generar' elige 144 números al azar y los guarda en una lista
@@ -28,7 +31,13 @@ while i <= 12:
     else:
         i = i + 1
 else:
-    print(prodmens)
-    suma = np.array(suma)
-    print(suma)
-    print(suma.shape)
+# Convetimos la lista de valores en un arreglo unidimensional
+    np.array(prodmens)
+# Inicializamos la variable k para proceder al segundo paso
+    k = 1 
+    while k <= 3:
+        i = 1
+        while i <= 12:
+            j = 1
+            while j <= 4:
+                vk=[] 
