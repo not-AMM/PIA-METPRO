@@ -1,43 +1,37 @@
 import numpy as np
-from random import random
-from random import sample as generar
 # j representa los años
 # i representa los meses
 # k representa los departamentos
 
-dp1 = [] # Necesito encontrar un modo de dividir las listas para encontrar lo que pertenece a cada departamento
-dp2 = [] # o, en su defecto, encontrar el modo de guardar todo en un array y extraerlo cuando lo necesite
-dp3 = [] # como si fueran coordenadas
-vk = []
-# Se genera una lista con valores desde el 400 hasta el 1500
-valores = range(400,1500)
-# La función 'generar' elige 144 números al azar y los guarda en una lista
-valores = generar(valores,k=144)
+# Inicializamos la variable 'i', aunque habrá que corregir porque en Python se comienza en 0.
 i = 1
+# El primer bucle representa una iteración sobre los meses.
 while i <= 12:
     j = 1
+    # El segundo bucle representa una iteración sobre los departamentos.
     while j <= 4:
         k = 1
+        # El tercer bucle representa una iteración sobre los años.
         while k <= 3:
+            # Creamos el array. Probablemente sería mejor hacer una lsita y convertirla en array.
             M = np.array((i,j,k))
-            # Los valores al azar representan la producción de cada mes de cada departamento
-            for x in valores:
-                print("Producción del mes " + str(i) + " del año " + str(j) + " del departamento " + str(k) + ": " + str(x))
-                prod = x
-            prodmens.append(prod)
+            # Creamos una lista
+            suma = []
+            # COmenzaros a meter los datos
+            prod = float(input("Producción del mes " + str(i) + " del año " + str(j) + " del departamento " + str(k) + ":"))
+            suma.append(prod)
+            suma = np.array(suma)
             k = k + 1 
         else:
             j = j + 1
     else:
         i = i + 1
 else:
-# Convetimos la lista de valores en un arreglo unidimensional
-    np.array(prodmens)
-# Inicializamos la variable k para proceder al segundo paso
-    k = 1 
+    k = 1
     while k <= 3:
+        vk = []
         i = 1
         while i <= 12:
             j = 1
             while j <= 4:
-                vk=[] 
+                vk = suma[k]
