@@ -43,12 +43,12 @@ else:
     dpt3 = dpt3.tolist()
     dpt3 = reduce(list.__add__, dpt3, [])
     prod3 = sum(dpt3)
+    # Construimos el vector unidimensional con la producción de cada dept.
     prod = []
     prod.append(prod1)
     prod.append(prod2)
     prod.append(prod3)
     print(" Producción del año 1: $" + str(prod1) + "\n Producción del año 2: $" + str(prod2) + "\n Producción del año 3: $" + str(prod3))
-    # Terminamos las pruebas y procedemos con el programa---------------------------------
     mayor = 0
     k = 1
     while k <= 2:
