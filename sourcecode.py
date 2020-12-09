@@ -20,9 +20,7 @@ while i <= 11:
             # Generamos el arreglo tridimensional de 12 * 4 * 3
             ML = [[[random.randint(400, 1500) for k in range(2)] for j in range(3)] for i in range(11)]
             M = np.array(ML,dtype=object)
-            # Pendiente el imprimir valores según el índice
             # valor = M[i,j,k]
-            print("Producción de: | Mes: " + str(i+1) + " | Año: " + str(j+1) + " | Departamento: " + str(k+1) + " | $") # + str(valor)
             k = k + 1 
         else:
             j = j + 1
@@ -32,8 +30,6 @@ else:
     # Comienza la segunda parte del primer programa
     # Imprimimos la matriz
     print(M)
-    print("Segundo número = " + str(M[0,0,1]))
-    print("Último número = " + str(M[i,j,k]))
     # Obtenemos la suma de la producción de cada departamento
     dpt1 = M.T[0]
     dpt1 = dpt1.tolist()
