@@ -18,7 +18,7 @@ while i <= 11:
         # El tercer bucle representa una iteración sobre los departamentos.
         while k <= 2:
             # Generamos el arreglo tridimensional de 12 * 4 * 3
-            ML = [[[random.randint(400, 1500) for k in range(2)] for j in range(3)] for i in range(11)]
+            ML = [[[random.randint(400, 1500) for k in range(3)] for j in range(4)] for i in range(12)]
             M = np.array(ML,dtype=object)
             # valor = M[i,j,k]
             k = k + 1 
